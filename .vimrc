@@ -8,6 +8,7 @@ set autoindent
 set smartcase
 set wildmenu
 set foldmethod=indent
+set foldlevel=99
 
 autocmd BufWritePre * :%s/\s\+$//e
 
@@ -25,11 +26,11 @@ nmap <leader>k :NERDTreeToggle<CR>
 call plug#begin()
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
+Plug 'wellle/context.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'maxboisvert/vim-simple-complete'
-Plug 'pechorin/any-jump.vim'
-Plug 'phanviet/vim-monokai-pro'
 Plug 'Raimondi/delimitMate'
+Plug 'phanviet/vim-monokai-pro'
 call plug#end()
 
 colorscheme monokai_pro
