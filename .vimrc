@@ -13,14 +13,14 @@ set foldlevel=99
 autocmd BufWritePre * :%s/\s\+$//e
 
 function! ToggleMouse()
-    if mouse == 'a'
-    	set mouse=n
+    if &mouse == 'a'
+    	set mouse=
 	else
 		set mouse=a
 	endif
 endfunction
 
-nnoremap ‹leader>m :call ToggleMouse<CR>
+nnoremap <leader>m :call ToggleMouse()<CR>
 nmap <leader>k :NERDTreeToggle<CR>
 
 call plug#begin()
